@@ -1,6 +1,7 @@
 import scrapy
 import re
 
+
 class AbreviaturasScraper(scrapy.Spider):
     name = 'AbreviaturasScraper'
     start_urls = ['https://pt.wikipedia.org/wiki/Lista_de_abreviaturas']
@@ -8,42 +9,45 @@ class AbreviaturasScraper(scrapy.Spider):
     def parse(self, response):
 
         for item in response.xpath('//div[@class="mw-parser-output"]/div/ul/li'):
-            #print(item.xpath('./text()').extract())
-            #print(item.css('a::attr(title)').extract())
-            yield {
-                'title': self.get_title(item),
-                'abrev': self.get_abrev(item)
-            }
-    
-    def get_abrev(self, item):
-        abrev = item.xpath('./text()').extract()
+            yield self.get_values(item)
 
-        if len(abrev):
-            s = abrev[0].split('—')[0].strip()
-            print(s)
-            return s
+    def get_values(self, item):
+        '''
+            Get the abbreviations and their descriptions
+        '''
+        abrev = ''
+        desc = ''
+        result = {'abrev': '', 'desc': ''}
 
-        return None
-    
-    def get_title(self, item):
+        # extract the item's content
         text = item.extract()
 
         if text:
-            text = re.search(r'<li>(.+)</li>', text)
-            text = text.group(1)
-            try:
-                title = text.split('—')[1:]
-                title = '—'.join(title).strip()
-            except IndexError:
-                try:
-                    title = text.split(' ')[1:]
-                    title = ' '.join(title).strip()
-                except IndexError:
-                    title = text
+            # remove the tags
+            text = re.sub(
+                r'<[^>]+>', r'', text)
 
-            title_sub = re.sub(r'<a[^>]+>(.+)</a>', r'\1', title)
-            title_sub = re.sub(r'(<i>)|(</i>)|(<sup.+)', '', title_sub)
-            
-            return title_sub
+            # split the text by "—"
+            splitted_text = text.split('—')
 
-        return None
+            # check if was splitted
+            if len(splitted_text) >= 2:
+                abrev = splitted_text[0].strip()
+                desc = splitted_text[1:]
+                desc = ' — '.join(desc).strip()
+            else:
+                # try to split by space
+                splitted_text = text.split(' ')
+
+                # check if was splitted
+                if len(splitted_text) >= 2:
+                    abrev = splitted_text[0].strip()
+                    desc = splitted_text[1:]
+                    desc = ' '.join(desc).strip()
+                else:
+                    abrev = text
+
+            result['abrev'] = abrev
+            result['desc'] = desc
+
+        return result
