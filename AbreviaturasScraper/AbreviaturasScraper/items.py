@@ -9,5 +9,5 @@ import scrapy
 
 
 class AbreviaturasscraperItem(scrapy.Item):
-    title= scrapy.Field()
     abrev= scrapy.Field()
+    desc= scrapy.Field()
