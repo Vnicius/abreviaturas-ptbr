@@ -14,9 +14,9 @@ a.al.,alto-alemão
 A.B.,"Artium Baccalaureus, bacharel de artes, bacharel em artes"
 a.c.,"anni currentis ou anno currente, do corrente ano"
 A.C.,"anno Christi, no ano de Cristo, na era cristã"
-a.C.,antes de Cristo[1]
+a.C.,antes de Cristo
 a.C.e.,"misto anestésico de álcool, clorofórmio e éter"
-A.D.,aguarda deferimento[1]
+A.D.,aguarda deferimento
 A.D.,"anno Domini, no ano do Senhor, na era cristã"
 a.d.,"ante diem, antes do dia"
 A.E.C.,antes da era comum (com ou sem pontos  —  ver E.C.)
@@ -75,7 +75,7 @@ abus.,abusivamente
 ac,acre(s)
 Ac,actínio
 ac.,"ft acre-foot (feet), acre-pé"
-acad.,academia[1]
+acad.,academia
 acad.,acadêmico
 academ.,academicismo
 acadêm.,acadêmico
@@ -91,7 +91,7 @@ ad init.,"ad initium, no início, logo no início"
 ad int.,"ad interim, interinamente, no ínterim"
 ad lib.,"ad libitum, à vontade, a gosto"
 ad loc.,"ad locum, ao lugar, para o lugar"
-ad val.,"ad valorem, pelo valor[1]"
+ad val.,"ad valorem, pelo valor"
 ad.,adágio
 ad.,adiado
 adag.,"adagio, lentamente"
@@ -117,7 +117,7 @@ adm. rom.,administração romana
 admir.,admiração
 adv.,adverbial
 adv.,advérbio
-Adv.,advocacia[1]
+Adv.,advocacia
 adv. af.,advérbio de afirmação
 adv. conf.,advérbio de confirmação
 adv. design.,advérbio de designação
@@ -167,10 +167,10 @@ agl.,aglutinação
 agn.,agnome
 ago.,agosto
 agpc,Agente de Polícia Civil
-agric.,agricultura[1]
+agric.,agricultura
 agrim.,agrimensura
 agrol.,agrologia
-agron.,agronomia[1]
+agron.,agronomia
 Ah,"ampere(s)-hora, ampère(s)-hora"
 aj.,ajudante
 aj.te,ajudante
@@ -214,18 +214,18 @@ alq,alqueire(s)
 alq.,alquimia
 alquil.,alquilaria
 als.,alsaciano
-alt.,altitude[1]
+alt.,altitude
 alt.,alto
 alt.,altura
 alt.-al.,alto-alemão
 altan.,altanaria
 alter.,alteração
 altern.,alternação
-altit.,altitude[1]
+altit.,altitude
 alto-al.,alto-alemão
 alus. lit.,alusão literária
 alusão lit.,alusão literária
-alv.,alvará[1]
+alv.,alvará
 alv.,alvenaria
 alveit.,alveitaria
 alven.,alvenaria
@@ -2524,7 +2524,7 @@ m.ª,mesma
 M.ª,mestra
 m.ª,minha
 m.a.-al.,médio alto-alemão
-M.al,Marechal[1]
+M.al,Marechal
 m.alt.-al.,médio altoalemão
 M.B.,"Medicinae Baccalaureus, bacharel de medicina, bacharel em medicina"
 m.ço,março
@@ -2589,8 +2589,8 @@ maj.-brig.,major-brigadeiro
 mal.,malabar
 mal.,malabárico
 mal.,malaio
-Mal.,marechal[1]
-mal.,marechal[1]
+Mal.,marechal
+mal.,marechal
 malab.,malabar
 malab.,malabárico
 malac.,malacologia

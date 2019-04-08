@@ -25,7 +25,8 @@ class AbreviaturasScraper(scrapy.Spider):
         if text:
             # remove the tags
             text = re.sub(
-                r'<[^>]+>', r'', text)
+                r'(<[^>]+>)', r'', text)
+            text = re.sub(r'(\[\d+\])', r'', text)
 
             # split the text by "—"
             splitted_text = text.split('—')
