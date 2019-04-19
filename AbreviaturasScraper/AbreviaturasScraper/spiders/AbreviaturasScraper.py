@@ -11,16 +11,18 @@ class AbreviaturasScraper(scrapy.Spider):
         for item in response.xpath('//div[@class="mw-parser-output"]/div/ul/li'):
             yield self.get_values(item.extract())
 
-    def get_values(self, extract_value):
+    def get_values(self, extracted_value):
         '''
-            Get the abbreviations and their descriptions
+            Get the abbreviations and their descriptions    
+
+            Params:
+                extracted_value(str): extracted value from the Selector object
         '''
+        # extract the item's content
+        text = extracted_value
         abrev = ''
         desc = ''
         result = {'abrev': '', 'desc': ''}
-
-        # extract the item's content
-        text = extract_value
 
         if text:
             # remove the tags
