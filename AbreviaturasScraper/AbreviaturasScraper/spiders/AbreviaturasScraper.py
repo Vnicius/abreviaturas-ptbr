@@ -9,9 +9,9 @@ class AbreviaturasScraper(scrapy.Spider):
     def parse(self, response):
 
         for item in response.xpath('//div[@class="mw-parser-output"]/div/ul/li'):
-            yield self.get_values(item)
+            yield self.get_values(item.extract())
 
-    def get_values(self, item):
+    def get_values(self, extract_value):
         '''
             Get the abbreviations and their descriptions
         '''
@@ -20,7 +20,7 @@ class AbreviaturasScraper(scrapy.Spider):
         result = {'abrev': '', 'desc': ''}
 
         # extract the item's content
-        text = item.extract()
+        text = extract_value
 
         if text:
             # remove the tags
