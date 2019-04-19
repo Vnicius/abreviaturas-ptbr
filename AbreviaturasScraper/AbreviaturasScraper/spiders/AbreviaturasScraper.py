@@ -18,7 +18,6 @@ class AbreviaturasScraper(scrapy.Spider):
             Params:
                 extracted_value(str): extracted value from the Selector object
         '''
-        # extract the item's content
         text = extracted_value
         abrev = ''
         desc = ''
